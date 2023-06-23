@@ -1,6 +1,7 @@
 # Projeto_GenPet
 
-![image](https://github.com/RitaAlmeidah/Projeto_GenPet/assets/133229401/2a5c2221-f649-4adb-8eb8-7ac2679499fa)
+![image](https://github.com/RitaAlmeidah/Projeto_GenPet/assets/133229401/870d3eb5-691e-4251-8ad6-7935da1e1e66)
+
 
 - Desenvolvido com a tecnologia Java.
 - Concluído em 13/06/2023.
@@ -16,15 +17,10 @@
 Equipe de desenvolvimento GenPet: 
 
 - Gabriela Guerra https://github.com/GabrielaFigueiredoDev
-  
 - Thayron Nogueira https://github.com/thayrun
-  
 - Rita Almeida https://github.com/RitaAlmeidah
-  
 - Isa Miguel https://github.com/Isamiguel
-  
 - Mayara Souza https://github.com/Maysouzac
-  
 - Marielson Silva https://github.com/ElsoNN1zin/ElsoNN1zin
 
 
