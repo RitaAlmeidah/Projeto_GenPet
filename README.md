@@ -1,5 +1,7 @@
 # Projeto_GenPet
 
+![image](https://github.com/RitaAlmeidah/Projeto_GenPet/assets/133229401/2a5c2221-f649-4adb-8eb8-7ac2679499fa)
+
 - Desenvolvido com a tecnologia Java.
 - Concluído em 13/06/2023.
 
