@@ -263,6 +263,19 @@ public class MenuMetodos implements MenuRepositorio {
 			System.out.println("Tipo de Pelo: " + listarGato.getPelo());
 			System.out.println("Especie: " + listarGato.getEspecie());
 			System.out.println("Raça: " + listarGato.getRaca());
+
+			for (ProcedimentosModelo procedimentoDoPet : listaPV) 
+			{
+					ArrayList<String> procedimentos = procedimentoDoPet.getProcedimentos();
+					ArrayList<Double> valores = procedimentoDoPet.getValores();
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("               Procedimentos       ");
+					System.out.println("  *--------*--------*--------*-------*");
+					for (int indice = 0; indice < procedimentos.size(); indice++) {
+						System.out.println("  - Procedimento: " + procedimentos.get(indice)
+								+ valores.get(indice));
+				}
+			}
 		}
 	}
 
@@ -293,7 +306,19 @@ public class MenuMetodos implements MenuRepositorio {
 			System.out.println("Cor do Pet: " + listarCachorro.getCor());
 			System.out.println("Especie: " + listarCachorro.getEspecie());
 			System.out.println("Raça: " + listarCachorro.getRacaCachorro());
-			
+			for (ProcedimentosModelo procedimentoDoPet : listaPV) {
+				if (procedimentoDoPet.getNomeAnimal().equalsIgnoreCase(listarCachorro.getNomeAnimal())) {
+					ArrayList<String> procedimentos = procedimentoDoPet.getProcedimentos();
+					ArrayList<Double> valores = procedimentoDoPet.getValores();
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("               Procedimentos       ");
+					System.out.println("  *--------*--------*--------*-------*");
+					for (int indice = 0; indice < procedimentos.size(); indice++) {
+						System.out.println((indice + 1) + " - Procedimento: " + procedimentos.get(indice) + " Valor: "
+								+ valores.get(indice));
+					}
+				}
+			}
 		}
 	}
 
@@ -734,8 +759,7 @@ public class MenuMetodos implements MenuRepositorio {
 				|| especie.replaceAll("\\s", "").equalsIgnoreCase("Felina")) {
 			if (iFichaGato.hasNext()) {
 				CadastroAnimalGato fichaGato = iFichaGato.next();
-				if (fichaGato.getEspecie().replaceAll("\\s", "").equalsIgnoreCase("Felino")
-						|| especie.replaceAll("\\s", "").equalsIgnoreCase("Felina")) {
+				if (fichaGato.getEspecie().replaceAll("\\s", "").equalsIgnoreCase("Felino")) {
 					System.out.println("\n  *--------*--------*--------*-------*");
 					System.out.println("     Valor da castração Acrescentado  ");
 					System.out.println("  *--------*--------*--------*-------*");
@@ -889,8 +913,7 @@ public class MenuMetodos implements MenuRepositorio {
 		lerString = leia.nextLine();
 
 		for (CadastroAnimalGato Gato : listaCadastroGato) {
-			if (Gato.getNomeAnimal().equalsIgnoreCase(lerString))
-			{
+			if (Gato.getNomeAnimal().equalsIgnoreCase(lerString)) {
 
 				CadastroAnimalGato gatoEncontrado = Gato;
 
@@ -913,27 +936,28 @@ public class MenuMetodos implements MenuRepositorio {
 				System.out.println("Tipo de Pelo: " + gatoEncontrado.getPelo());
 				System.out.println("Raça: " + gatoEncontrado.getRaca());
 				System.out.println("Valor total: " + valorTotal);
-				
-				for (ProcedimentosModelo procedimentoDoPet : listaPV) 
-				{
+
+				for (ProcedimentosModelo procedimentoDoPet : listaPV) {
+					if (procedimentoDoPet.getNomeAnimal().equalsIgnoreCase("lerString")) {
 						ArrayList<String> procedimentos = procedimentoDoPet.getProcedimentos();
 						ArrayList<Double> valores = procedimentoDoPet.getValores();
 						System.out.println("\n  *--------*--------*--------*-------*");
 						System.out.println("               Procedimentos       ");
 						System.out.println("  *--------*--------*--------*-------*");
 						for (int indice = 0; indice < procedimentos.size(); indice++) {
-							System.out.println("  - Procedimento: " + procedimentos.get(indice)
-									+ valores.get(indice));
+							System.out.println((indice + 1) + " - Procedimento: " + procedimentos.get(indice)
+									+ " Valor: " + valores.get(indice));
+						}
 					}
 				}
-			} 
-			if(listaCadastroGato.isEmpty()) {
+			} else {
 				System.out.println("\n  *--------*--------*--------*-------*");
-				System.out.println("    Você ainda não cadastro um felino ");
+				System.out.println("    Você ainda não cadastrou seu Pet");
 				System.out.println("  *--------*--------*--------*-------*");
 			}
 		}
 	}
+
 	public void buscarAnimalCachorro() {
 		listarPets();
 		leia.skip("\\R?");
@@ -968,22 +992,22 @@ public class MenuMetodos implements MenuRepositorio {
 				System.out.println("Raça: " + cachorroEncontrado.getRacaCachorro());
 				System.out.println("Valor total: " + valorTotal);
 
-				for (ProcedimentosModelo procedimentoDoPet : listaPV) 
-				{
+				for (ProcedimentosModelo procedimentoDoPet : listaPV) {
+					if (procedimentoDoPet.getNomeAnimal().equalsIgnoreCase("lerString")) {
 						ArrayList<String> procedimentos = procedimentoDoPet.getProcedimentos();
 						ArrayList<Double> valores = procedimentoDoPet.getValores();
 						System.out.println("\n  *--------*--------*--------*-------*");
 						System.out.println("               Procedimentos       ");
 						System.out.println("  *--------*--------*--------*-------*");
 						for (int indice = 0; indice < procedimentos.size(); indice++) {
-							System.out.println("  - Procedimento: " + procedimentos.get(indice)
-									+ valores.get(indice));
+							System.out.println((indice + 1) + " - Procedimento: " + procedimentos.get(indice)
+									+ " Valor: " + valores.get(indice));
+						}
 					}
 				}
-			} 
-			if(listaCadastroGato.isEmpty()) {
+			} else {
 				System.out.println("\n  *--------*--------*--------*-------*");
-				System.out.println("    Você ainda não cadastro um felino ");
+				System.out.println("    Você ainda não cadastrou seu Pet");
 				System.out.println("  *--------*--------*--------*-------*");
 			}
 		}
