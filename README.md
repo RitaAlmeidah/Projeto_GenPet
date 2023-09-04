@@ -17,7 +17,7 @@ O Projeto será composto pelas seguintes Classes e Interfaces:
 
 
 
-<h2>2. Como executar o Projeto Conta Bancária</h2>
+<h2>2. Como executar o Projeto GenPet</h2>
 
 ### Pré-requisitos
 
